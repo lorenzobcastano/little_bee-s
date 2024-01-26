@@ -68,3 +68,5 @@ group :test do
   gem "selenium-webdriver"
 end
 gem "devise"
+gem 'simple_form'
+gem 'cssbundling-rails'

@@ -1,0 +1,26 @@
+<div class='container'>
+    <%= link_to products_path, class: 'btn btn-primary mb-2 text-center' do %>
+      <i class="fas fa-chevron-left"></i> Back to List
+    <% end %>
+  </div>
+  <div class='container d-flex justify-content-center'>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <%# <%= cl_image_tag @product.photo.key, class: "card-img-top" if @product.photo.attached? %>
+          <div class="card-body">
+            <h2 class="card-title"><%= @product.name %></h2>
+            <p class="card-text"><%= @product.description %></p>
+            <h3 class="card-text">$<%= @product.price %></h3>
+            <%= link_to edit_product_path, class: 'btn btn-primary' do %>
+            <i class="fas fa-edit"></i> Edit
+            <% end %>
+            <%= link_to "/products/#{@product.id}/purchases/new", class: 'btn btn-success' do %>
+              <i class="fas fa-shopping-cart"></i> Buy
+            <% end%>
+            <%= link_to products_path(@product.id), class: 'btn btn-danger', data: { turbo_method: :destroy, turbo_confirm: 'Are you sure you want to permanently delete this product?' } do %>
+              <i class="fas fa-trash-alt"></i> Delete
+            <% end %>
+          </div>
+        </div>
+      </div>
+</div>

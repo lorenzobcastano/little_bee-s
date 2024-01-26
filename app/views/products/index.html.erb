@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: products_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Type a keyword"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<div class="container d-flex justify-content-between">
+<%= link_to '/', class: 'btn btn-secondary mb-2' do %>
+  <i class="fas fa-home"></i> Back home
+<% end %>
+  <%= link_to new_product_path, class: 'btn btn-success mb-2' do %>
+  <i class="fas fa-plus-circle"></i> Add new product
+<% end %>
+</div>
+<div class="container">
+
+  <h2 class="title">Product list</h2>
+
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <%# <%= cl_image_tag product.photo.key, class: "card-img-top" if product.photo.attached? %>
+            <h2 class="card-title"><%= product.name %></h2>
+            <p class="card-text"><%= product.description %></p>
+            <h3 class="card-text">$<%= product.price %></h3>
+            <%= link_to product, class: 'btn btn-primary' do %>
+            <i class="fas fa-info-circle"></i> More details
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

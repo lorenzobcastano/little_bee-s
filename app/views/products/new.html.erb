@@ -1,0 +1,17 @@
+<div class="center-form mt-5git a">
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name, label: "Product Name", placeholder: "Enter product name"%>
+  <%= f.input :description %>
+  <%= f.input :price, as: :integer%>
+  <%= f.input :photo, as: :file, input_html: { class: "custom-file-input" } %>
+<div class="button-container">
+<%= f.button :submit, "Create Product", class: "btn-success" %>
+    <%= link_to '/', class: 'btn btn-secondary mb-2' do %>
+      <i class="fas fa-home"></i> Back home
+    <% end %>
+    <%= link_to products_path, class: 'btn btn-primary mb-2 text-center' do %>
+      <i class="fas fa-chevron-left"></i> Back to List
+    <% end %>
+</div>
+<% end %>
+</div>
