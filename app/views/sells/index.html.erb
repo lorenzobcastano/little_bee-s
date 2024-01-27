@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center">Tu Bolsa de Compras</h2>
+
+      <% @sells.reverse_each.with_index(1) do |sell, index| %>
+        <div class="card mb-2">
+          <div class="card-body">
+            <h6 class="card-title"><%= "#{index}. #{sell.products.name}" %></h6>
+            <p class="card-text">
+              <span class="float-left">
+                <% if sell.created_at.present? %>
+                  Comprado el: <%= sell.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+                <% else %>
+                  Comprado el: N/A
+                <% end %>
+              </span>
+            </p>
+          </div>
+        </div>
+      <% end %>
+
+      <div class='container'>
+        <%= link_to products_path, class: 'btn btn-success mb-2 text-center' do %>
+          <i class="fas fa-cart-arrow-down"></i> Continuar Comprando
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

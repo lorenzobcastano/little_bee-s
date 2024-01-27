@@ -17,9 +17,9 @@
             <%= link_to "/products/#{@product.id}/purchases/new", class: 'btn btn-success' do %>
               <i class="fas fa-shopping-cart"></i> Buy
             <% end%>
-<%= link_to @product, class: 'btn btn-danger', data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to permanently delete this product?' } do %>
-  <i class="fas fa-trash-alt"></i> Delete
-<% end %>
+            <%= link_to @product, class: 'btn btn-danger', data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to permanently delete this product?' } do %>
+              <i class="fas fa-trash-alt"></i> Delete
+            <% end %>
           </div>
         </div>
       </div>

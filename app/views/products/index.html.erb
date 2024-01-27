@@ -34,6 +34,9 @@
             <%= link_to product, class: 'btn btn-primary' do %>
             <i class="fas fa-info-circle"></i> More details
             <% end %>
+            <%= link_to "/products/#{product.id}/sells/new", class: 'btn btn-success' do %>
+              <i class="fas fa-shopping-cart"></i> Buy
+            <% end%>
           </div>
         </div>
       </div>
