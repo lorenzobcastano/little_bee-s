@@ -14,7 +14,7 @@
             <%= link_to edit_product_path, class: 'btn btn-primary' do %>
             <i class="fas fa-edit"></i> Edit
             <% end %>
-            <%= link_to "/products/#{@product.id}/purchases/new", class: 'btn btn-success' do %>
+            <%= link_to "/products/#{@product.id}/sells/new", class: 'btn btn-success' do %>
               <i class="fas fa-shopping-cart"></i> Buy
             <% end%>
             <%= link_to @product, class: 'btn btn-danger', data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to permanently delete this product?' } do %>

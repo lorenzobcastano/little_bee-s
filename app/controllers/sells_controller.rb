@@ -12,10 +12,6 @@ class SellsController < ApplicationController
   def create
     @sell = Sell.new(sell_params)
     @product = Product.find(params[:product_id])
-
-    # Associate the product with the sell
-    @sell.products << @product
-
     # Set the creation time
     @sell.created_at = Time.now
 
