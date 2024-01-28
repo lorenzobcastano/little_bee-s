@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :sells
   end
+  resources :sells, only: [:new, :create, :index]
   # Defines the root path route ("/")
   # root "posts#index"
 end

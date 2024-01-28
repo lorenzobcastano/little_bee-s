@@ -10,16 +10,22 @@
     <% end %>
   </div>
 </div>
-<div class="container d-flex justify-content-between">
-<%= link_to '/', class: 'btn btn-secondary mb-2' do %>
-  <i class="fas fa-home"></i> Back home
-<% end %>
-  <%= link_to new_product_path, class: 'btn btn-success mb-2' do %>
-  <i class="fas fa-plus-circle"></i> Add new product
-<% end %>
-</div>
-<div class="container">
 
+<div class="container d-flex justify-content-between">
+  <%= link_to '/', class: 'btn btn-secondary mb-2' do %>
+    <i class="fas fa-home"></i> Back home
+  <% end %>
+
+  <%= link_to new_product_path, class: 'btn btn-success mb-2' do %>
+    <i class="fas fa-plus-circle"></i> Add new product
+  <% end %>
+
+  <%= link_to new_sell_path, class: 'btn btn-success' do %>
+    <i class="fas fa-shopping-cart"></i> New Sell
+  <% end %>
+</div>
+
+<div class="container">
   <h2 class="title">Product list</h2>
 
   <div class="row">
@@ -27,19 +33,21 @@
       <div class="col-md-4 mb-4">
         <div class="card">
           <div class="card-body">
-            <%# <%= cl_image_tag product.photo.key, class: "card-img-top" if product.photo.attached? %>
             <h2 class="card-title"><%= product.name %></h2>
             <p class="card-text"><%= product.description %></p>
             <h3 class="card-text">$<%= product.price %></h3>
             <%= link_to product, class: 'btn btn-primary' do %>
-            <i class="fas fa-info-circle"></i> More details
+              <i class="fas fa-info-circle"></i> More details
             <% end %>
             <%= link_to "/products/#{product.id}/sells/new", class: 'btn btn-success' do %>
               <i class="fas fa-shopping-cart"></i> Buy
-            <% end%>
+            <% end %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+<h1 data-controller =select>buenas</h1>
+<h1 data-controller = hellos>anashe</h1>
