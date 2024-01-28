@@ -9,5 +9,8 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "dependencies": {
+    "slim-select": "^2.8.1"
+  }
 }

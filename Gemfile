@@ -71,4 +71,4 @@ gem "devise"
 gem 'simple_form'
 gem 'cssbundling-rails'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
-
+gem 'prawn', '~> 2.4'
