@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-
 ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -70,5 +69,4 @@ end
 gem "devise"
 gem 'simple_form'
 gem 'cssbundling-rails'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
-gem 'prawn', '~> 2.4'
+
