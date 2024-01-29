@@ -5,6 +5,7 @@ class SellsController < ApplicationController
 
   def new
     @sell = Sell.new
+    @products = Product.all
   end
 
   def show
