@@ -1,6 +1,7 @@
 class SellsController < ApplicationController
   def index
     @sells = Sell.includes(:products).all
+
   end
 
   def new
@@ -10,7 +11,12 @@ class SellsController < ApplicationController
 
   def show
     @sell = Sell.find(params[:id])
-    # Add any additional logic you need for displaying a single sell
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "file_name", template: "show.html.erb"   # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def create

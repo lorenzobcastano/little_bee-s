@@ -69,4 +69,5 @@ end
 gem "devise"
 gem 'simple_form'
 gem 'cssbundling-rails'
-
+gem 'wicked_pdf', '~> 1.1'
+gem 'wkhtmltopdf-binary'
